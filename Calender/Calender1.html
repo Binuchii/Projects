@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Calender1.css" />
+    <title>Assignment 8</title>
+    <script>
+      let numDays;
+      let dayOne;
+      let T1 = "";
+      let T2 = "";
+      let T3 = "";
+      let T4 = "";
+      let T5 = "";
+      let T6 = "";
+
+      function queries() {
+        let week1 = document.querySelector(".week1");
+        let week2 = document.querySelector(".week2");
+        let week3 = document.querySelector(".week3");
+        let week4 = document.querySelector(".week4");
+        let week5 = document.querySelector(".week5");
+        let week6 = document.querySelector(".week6");
+
+        let count = 1;
+        let remainCount = 0;
+
+        let numOfDays = prompt(
+          "Enter the number of days in the month: "
+        );
+        let firstDay = prompt(
+          `Please indicate what day the first of the month falls on.\n (For example 0 = Sunday, 1 = Monday etc..) :`
+        );
+
+        numDays = parseInt(numOfDays);
+        dayOne = parseInt(firstDay);
+
+        console.log(numDays);
+        console.log(dayOne);
+
+        for (let i = 0; i < dayOne; i++) {
+          T1 += `<td class="blank"></td>`;
+        }
+
+        for (let i = dayOne; i <= 6; i++) {
+          T1 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week1.innerHTML = T1;
+        //week 2
+        for (let i = 0; i < 7; i++) {
+          T2 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week2.innerHTML = T2;
+        //week 3
+        for (let i = 0; i < 7; i++) {
+          T3 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week3.innerHTML = T3;
+        //week 4
+        for (let i = 0; i < 7; i++) {
+          T4 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week4.innerHTML = T4;
+
+        //week 5
+        for (let i = 0; i < 7; i++) {
+          if (count > numDays) {
+            console.log(i);
+            for (let j = i; j < 7; j++) {
+              T5 += `<td class="blank"></td>`;
+            }
+            break;
+          }
+          T5 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week5.innerHTML = T5;
+
+        //week 6
+        for (let i = 0; i < 7; i++) {
+          if (count > numDays) {
+            console.log(i);
+            for (let j = i; j < 7; j++) {
+              T6 += `<td class="blank"></td>`;
+            }
+            break;
+          }
+          T6 += `<td class="nums">${count}</td>`;
+          count++;
+        }
+        week6.innerHTML = T6;
+      }
+    </script>
+  </head>
+  <body onload="queries()">
+    <div>
+      <table>
+        <tr class="days">
+          <td>Sun</td>
+          <td>Mon</td>
+          <td>Tue</td>
+          <td>Wed</td>
+          <td>Thu</td>
+          <td>Fri</td>
+          <td>Sat</td>
+        </tr>
+        <tr class="week1"></tr>
+        <tr class="week2"></tr>
+        <tr class="week3"></tr>
+        <tr class="week4"></tr>
+        <tr class="week5"></tr>
+        <tr class="week6"></tr>
+      </table>
+    </div>
+  </body>
+</html>

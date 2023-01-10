@@ -1,0 +1,39 @@
+body {
+    background-color: lightgray;
+  }
+  
+  div {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  td {
+    padding: 0 20px;
+    border: solid;
+    border-width: 3px 3px;
+  }
+  
+  .days {
+    background-color: blanchedalmond;
+    border-color: black;
+  }
+  
+  .blank {
+    padding: 0 20px;
+    border: solid;
+    border-width: 3px 3px;
+    background-color: red;
+  }
+  
+  .nums {
+    padding: 0 20px;
+    border: solid;
+    border-width: 3px 3px;
+    background-color: blue;
+  }
+  
