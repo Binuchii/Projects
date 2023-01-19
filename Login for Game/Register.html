@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="form-box">
+        <div class="button-box">
+          <button type="button" class="toggle-btn">Register</button>
+        </div>
+        <div id="register" class="input-group">
+          <input
+            type="text"
+            class="input-field"
+            id="username"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            class="input-field"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Password"
+            id="pass1"
+            required
+          />
+          <input
+            type="password"
+            class="input-field"
+            placeholder="Confirm Password"
+            id="pass2"
+            required
+          />
+          <p id="message"></p>
+          <button
+            class="submit-btn"
+            id="submit-btn"
+            onclick="checkPassword();createAccount();"
+          >
+            Register
+          </button>
+          Already have an account? <a href="/Login.html">Login</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="Login.js"></script>
+  </body>
+</html>
