@@ -1,3 +1,5 @@
+Bashbook is a basic Facebook-like social media server, created solely using Bash. In Bashbook all users will have their own respective walls, where the users can become friends with each other and can write messages on each other’s walls. 
+
 Explination of commands
 
 ==== Overview ====
